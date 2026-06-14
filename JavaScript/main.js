@@ -1,8 +1,8 @@
-window.addEventListener("load", () => {
+﻿window.addEventListener("load", () => {
     document.body.classList.add("loaded");
 });
 
-fetch("/nav.html")
+fetch("nav.html")
     .then(response => response.text())
     .then(data => {
 
@@ -16,7 +16,7 @@ fetch("/nav.html")
 function initialiseNavigation() {
 
     const navButtons = document.querySelectorAll(".nav-btn");
-    const currentPage = window.location.pathname;
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
     navButtons.forEach(button => {
 
