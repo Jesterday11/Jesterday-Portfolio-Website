@@ -98,6 +98,25 @@ if (themeSwitch) {
 
 
 // LightBox
+document.querySelectorAll(".game-images img[data-caption], .concept-images img[data-caption]")
+.forEach(img => {
+
+    if (img.parentElement.classList.contains("gallery-item")) {
+        return;
+    }
+
+    const galleryItem = document.createElement("figure");
+    galleryItem.className = "gallery-item";
+
+    const imageCaption = document.createElement("figcaption");
+    imageCaption.className = "image-caption";
+    imageCaption.textContent = img.dataset.caption;
+
+    img.replaceWith(galleryItem);
+    galleryItem.append(img, imageCaption);
+
+});
+
 const lightbox = document.querySelector(".lightbox");
 
 if (lightbox) {
