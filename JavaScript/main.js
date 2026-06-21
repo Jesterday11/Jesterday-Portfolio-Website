@@ -2,7 +2,7 @@ window.addEventListener("load", () => {
     document.body.classList.add("loaded");
 });
 
-fetch("/nav.html")
+fetch("nav.html")
     .then(response => response.text())
     .then(data => {
 
@@ -16,7 +16,10 @@ fetch("/nav.html")
 function initialiseNavigation() {
 
     const navButtons = document.querySelectorAll(".nav-btn");
-    const currentPage = window.location.pathname;
+    // Get just the filename from the path (e.g. "about.html" from "/repo-name/about.html").
+    // This makes active-page detection work on GitHub Pages project sites where the URL
+    // is https://user.github.io/repo-name/about.html
+    const currentPage = window.location.pathname.split("/").pop() || "index.html";
 
     navButtons.forEach(button => {
 
