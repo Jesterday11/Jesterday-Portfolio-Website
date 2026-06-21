@@ -130,7 +130,7 @@ html {
 
 body.dark-mode .nav-btn,
 body.dark-mode .page-content {
-    background-image: url("/Assets/blackBG.jpg");
+    background-image: url("Assets/blackBG.jpg");
 }
 
 body.dark-mode .banner {
@@ -138,7 +138,7 @@ body.dark-mode .banner {
 }
 
 body.dark-mode .section-break {
-    background-image: url("/Assets/border suit.png");
+    background-image: url("Assets/border suit.png");
     mix-blend-mode: difference;
 }
 
@@ -151,7 +151,7 @@ body.dark-mode .section-break {
     overflow: hidden;
     padding-bottom: 1rem;
 
-    background-image: url("/Assets/blog.jpg");
+    background-image: url("Assets/blog.jpg");
     background-size: cover;
     background-position: center;
 
@@ -210,7 +210,7 @@ body.dark-mode .section-break {
     padding: 1.7rem 5rem;
     border: 0;
     border-radius: 0 0 0.75rem 0.75rem;
-    background-image: url("/Assets/blog.jpg");
+    background-image: url("Assets/blog.jpg");
     background-position: center;
     background-size: cover;
     color: var(--text-color);
@@ -345,7 +345,7 @@ body.dark-mode .section-break {
     width: 100%;
     height: 60px;
     margin: 5rem 0;
-    background-image: url("/Assets/border suit.png");
+    background-image: url("Assets/border suit.png");
     background-position: 0 center;
     background-repeat: repeat-x;
     background-size: auto 95%;
